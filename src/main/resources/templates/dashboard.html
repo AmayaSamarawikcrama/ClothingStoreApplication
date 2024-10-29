@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trendy Vibes Overview</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f0f4f8, #c9d6e6);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .header {
+            background: #ff6f61;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            flex: 1;
+        }
+        .card {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 22%;
+            margin-bottom: 20px;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+        .card h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #ff6f61;
+        }
+        .card .value {
+            font-size: 2.5em;
+            color: #333;
+        }
+        .card .icon {
+            font-size: 2em;
+            color: #ff6f61;
+            margin-bottom: 10px;
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .card {
+                width: 48%;
+            }
+        }
+        @media (max-width: 480px) {
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+  <h1>Trendy </h1>
+</div>
+
+<div class="container">
+  <div class="card">
+    <i class="fas fa-dollar-sign icon"></i>
+    <h2>Sales Overview</h2>
+    <p class="value">$5,320</p>
+    <p>Total Sales This Month</p>
+  </div>
+  <div class="card">
+    <i class="fas fa-box icon"></i>
+    <h2>Recent Orders</h2>
+    <p class="value">48</p>
+    <p>Orders Processed</p>
+  </div>
+  <div class="card">
+    <i class="fas fa-tshirt icon"></i>
+    <h2>Best Selling Item</h2>
+    <p class="value">Classic Tee</p>
+    <p>Top Selling Item This Week</p>
+  </div>
+  <div class="card">
+    <i class="fas fa-user-plus icon"></i>
+    <h2>New Customers</h2>
+    <p class="value">25</p>
+    <p>New Customers This Week</p>
+  </div>
+</div>
+
+<div class="footer">
+  <p>&copy; 2024 Trendy Vibes Clothing Store</p>
+</div>
+</body>
+</html>

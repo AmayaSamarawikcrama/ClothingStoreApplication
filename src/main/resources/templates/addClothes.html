@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Clothes | Trendy Vibes</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .btn-custom {
+            background-color: #ff3366;
+            border-color: #ff3366;
+        }
+        .btn-custom:hover {
+            background-color: #ff0055;
+            border-color: #ff0055;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Add Clothes Form -->
+<div class="form-container">
+  <h2>New Arrival Entry</h2>
+  <form action="/add-clothes" method="post" enctype="multipart/form-data">
+    <!-- Clothing Name -->
+    <div class="mb-3">
+      <label for="clothingName" class="form-label">Clothing Name</label>
+      <input type="text" class="form-control" id="clothingName" name="clothingName" required>
+    </div>
+
+    <!-- Category Selection -->
+    <div class="mb-3">
+      <label for="category" class="form-label">Category</label>
+      <select class="form-select" id="category" name="category" required>
+        <option value="" selected disabled>Select a category</option>
+        <option value="casual-wear">Casual Wear</option>
+        <option value="summer-dress">Summer Dress</option>
+        <option value="formal-wear">Formal Wear</option>
+        <option value="maxi-dress">Maxi Dress</option>
+        <option value="sportswear">Sportswear</option>
+        <option value="party-wear">Party Wear</option>
+        <option value="jumpsuit">Jumpsuit</option>
+        <option value="jeans">Jeans</option>
+        <option value="shorts">Shorts</option>
+        <option value="skirts">Skirt</option>
+        <option value="Crop-tops">Tops & Blouses</option>
+      </select>
+    </div>
+
+    <!-- Price -->
+    <div class="mb-3">
+      <label for="price" class="form-label">Price (USD)</label>
+      <input type="number" class="form-control" id="price" name="price" step="0.01" required>
+    </div>
+
+    <!-- Stock Quantity -->
+    <div class="mb-3">
+      <label for="stock" class="form-label">Stock Quantity</label>
+      <input type="number" class="form-control" id="stock" name="stock" required>
+    </div>
+
+    <!-- Size Options -->
+    <div class="mb-3">
+      <label class="form-label">Available Sizes</label>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="sizes[]" value="XS" id="sizeXS">
+        <label class="form-check-label" for="sizeXS">XS</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="sizes[]" value="S" id="sizeS">
+        <label class="form-check-label" for="sizeS">S</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="sizes[]" value="M" id="sizeM">
+        <label class="form-check-label" for="sizeM">M</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="sizes[]" value="L" id="sizeL">
+        <label class="form-check-label" for="sizeL">L</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="sizes[]" value="XL" id="sizeXL">
+        <label class="form-check-label" for="sizeXL">XL</label>
+      </div>
+    </div>
+
+    <!-- Upload Image -->
+    <div class="mb-3">
+      <label for="image" class="form-label">Upload Image</label>
+      <input class="form-control" type="file" id="image" name="image" accept="image/*" required>
+    </div>
+
+    <!-- Description -->
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-custom w-100">Add Clothing Item</button>
+  </form>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+</html>
